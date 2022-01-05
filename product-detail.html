@@ -11,27 +11,69 @@
 
 <body>
   <nav>
-    <div class="nav_menu">
-
-      <div class="nav_menu_m">
-        <img class="ml_1" src="./icons/icon_menu.svg" alt="">
-        <img src="./logos/logo_yard_sale.svg" class="logo_small justify_c">
-        <img class="mr_1" src="./icons/icon_shopping_cart_notification.svg" alt="">
+    <div class="nav_menu_m">
+      <div>
+        <button class="ml_1 menu_btn" ">
+            <img class="" src=" ./icons/icon_menu.svg" alt="">
+        </button>
       </div>
+      <div class="mobile_menu">
+        <ul class="mt_1">
+          <li class="colse_btn li_high">
+            <button class="mr_1 menu_btn" onclick="showHide()">
+              <img class="" src="./icons/icon_close.png" alt="">
+            </button>
+          </li>
+          <li class="li_high">
+            <a class="primary_link upper font_medium font_w_bold" href="">Categories</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">All</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">Clothes</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">Electronics</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">Furnitures</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">Toys</a>
+          </li>
+          <li class="li_high">
+            <a class="primary_link font_medium font_w_bold" href="">Others</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="li_high"><a class="primary_link font_medium font_w_bold" href="">My Orders</a></li>
+          <li class="li_high"><a class="primary_link font_medium font_w_bold" href="">My Account</a></li>
+        </ul>
+        <ul>
+          <li class="li_high"><a class="primary_link font_medium font_w_bold" href="">milayoko@gmail.com</a></li>
+          <li class="li_high"><a class="primary_link font_medium font_w_bold" href="">Sign out</a></li>
+        </ul>
+      </div>
+      <img src="./logos/logo_yard_sale.svg" class="logo_small justify_c">
+      <img class="mr_1" src="./icons/icon_shopping_cart_notification.svg" alt="">
+    </div>
 
+    <div class="nav_menu_d">
       <ul>
-        <img src="./logos/logo_yard_sale.svg" class="logo_small justify_c">
+        <img class="ml_1" src="./logos/logo_yard_sale.svg" class="logo_small justify_c">
         <li><a class="font_medium" href="">All</a></li>
         <li><a class="font_medium" href="">Clothes</a></li>
         <li><a class="font_medium" href="">Electronics</a></li>
         <li><a class="font_medium" href="">Furniture</a></li>
         <li><a class="font_medium" href="">Toy</a></li>
       </ul>
+      <div class="nav_notify">
+        <p class="font_small">lindayoko@gmail.com</p>
+        <img class="ml_1" src="./icons/icon_shopping_cart_notification.svg" alt="">
+      </div>
     </div>
-    <div class="nav_notify">
-      <p class="font_small">lindayoko@gmail.com</p>
-      <img src="./icons/icon_shopping_cart_notification.svg" alt="">
-    </div>
+
   </nav>
 
   <div class="detail_wrapper">
@@ -52,6 +94,8 @@
       </div>
     </div>
   </div>
+  <script src="./index.js"></script>
+
 </body>
 
 </html>

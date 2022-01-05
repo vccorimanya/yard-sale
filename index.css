@@ -19,28 +19,52 @@ body {
 nav {
   display: grid;
   align-items: center;
- /*  justify-items: center; */
   height: 2.875rem;
   width: auto;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
 }
 
-nav ul{
+.nav_menu_d{
   display: none;
 }
 
 .nav_menu_m {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
+
 .menu_btn{
   outline: none;
   border: none;
   background: none;
 }
 
-.nav_notify {
-  display: none;
+.colse_btn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mobile_menu{
+  position: fixed;
+  background: var(--white);
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+  z-index: 3;
+}
+.mobile_menu.is-active {
+  left: 0;
+}
+
+.primary_link{
+  text-decoration: none;
+  color: var(--black);
 }
 
 .justify_c {
@@ -50,7 +74,12 @@ nav ul{
 .no_margin {
   margin: 0;
 }
-
+.li_high{
+  height: 2.5rem;
+}
+.mt_1 {
+  margin-top: 1rem;
+}
 .ml_1{
   margin-left: 1rem;
 }
@@ -67,6 +96,9 @@ nav ul{
 .font_w_bold {
   font-weight: 700;
 
+}
+.upper{
+  text-transform: uppercase;
 }
 
 .font_small {
@@ -249,12 +281,7 @@ li{
   display: flex;
   align-items: center;
 }
-.checkout_img_info img {
-  margin-right: 1rem;
-}
-.checkout_info_icon img {
-  margin-left: 1rem;
-}
+
 .checkout_info_icon{
   display: flex;
   align-items: center;
@@ -276,42 +303,22 @@ li{
   margin-bottom: 1rem;
 }
 
-.total p{
-  margin-left: 1rem;
-}
-.total h2{
-  margin-right: 1rem;
-}
-
 @media screen and (min-width: 1024px) {
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    height: 2.875rem;
-    width: auto;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
-    grid-auto-flow: column;
-  }
   .nav_menu_m {
     display: none;
   }
-  .nav_menu{
+
+  .nav_menu_d{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 1rem;
   }
-  .nav_menu img{
-    margin-right: 51px;
-  }
+
   .nav_notify{
     display: flex;
     align-items: center;
     margin-right: 1rem;
-  }
-  .nav_notify img {
-    margin-left: 51px;
-
   }
 
   nav ul{
@@ -335,9 +342,6 @@ li{
    border-radius: 10px;
  }
 
-  .logo {
-    visibility: hidden;
-  }
   .sort_container {
     grid-auto-flow: column;
     justify-self: self-start;
@@ -346,9 +350,7 @@ li{
   .sort_container ul {
     display: none;
   }
-  .filter {
-    margin-left: 1rem;
-  }
+
   .product_img {
     width: 216px;
     height: 216px;
